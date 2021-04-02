@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-
+import { connect } from "react-redux";
 import { init as axios } from '../../../services/axios-orders';
 import { userSchema } from "../../../services/orderValidation";
 import classes from './ContactData.module.css';
+
 import { Button } from '../../../components/UI/Button/Button';
 import { Spinner } from '../../../components/UI/Spinner/Spinner';
 import { withErrorHandler } from '../../../hoc/withErrorHandler/withErrorHandler';
 import {Input} from "../../../components/UI/Input/Input";
+import * as actions from '../../../actions/index';
+import {Redirect} from "react-router";
 
 class ContactData extends Component {
     state = {
@@ -62,7 +65,6 @@ class ContactData extends Component {
                 value: '',
             },
         },
-        loading: false,
         isFormValid: true,
     }
 
@@ -108,15 +110,7 @@ class ContactData extends Component {
             customer: orderData,
         }
 
-        this.setState({ loading: true });
-
-        axios.post('/orders.json', order)
-            .then(response => {
-                this.props.history.push('/');
-            })
-            .finally(() => {
-                this.setState({ loading: false });
-            })
+        this.props.onOrderBurger(order);
     }
 
     onChangeHandler = (e, inputIdentity) => {
@@ -145,33 +139,50 @@ class ContactData extends Component {
                 options: this.state.orderForm[key],
             })
         }
-
+        const purchasedRedirect = this.props.purchased ? <Redirect to={'/'}/> : null
         return (
-            !this.state.loading
-                ? ( <div className={classes.ContactData}>
-                <h4>Enter your Contact Data</h4>
-                <form onSubmit={this.orderHandler}>
-                    {formInputsArray.map(input => (
-                        <Input
-                            key={input.id}
-                            elementType={input.options.elementType}
-                            elementConfig={input.options.elementConfig}
-                            value={input.value}
-                            changed={e => this.onChangeHandler(e, input.id)}
-                        />
-                    ))}
-                    {!this.state.isFormValid && <p className={classes.ValidationMessage}>All inputs must be filled!</p>}
-                    <Button
-                        btnType='Success'
-                        clicked={() => {}}
-                    >
-                        ORDER
-                    </Button>
-                </form>
-            </div>)
+            !this.props.loading
+                ? (
+                    <div className={classes.ContactData}>
+                        {purchasedRedirect}
+                        <h4>Enter your Contact Data</h4>
+                        <form onSubmit={this.orderHandler}>
+                            {formInputsArray.map(input => (
+                                <Input
+                                    key={input.id}
+                                    elementType={input.options.elementType}
+                                    elementConfig={input.options.elementConfig}
+                                    value={input.value}
+                                    changed={e => this.onChangeHandler(e, input.id)}
+                                />
+                            ))}
+                            {!this.state.isFormValid && <p className={classes.ValidationMessage}>All inputs must be filled!</p>}
+                            <Button
+                                btnType='Success'
+                                clicked={() => {}}
+                            >
+                                ORDER
+                            </Button>
+                        </form>
+                    </div>)
                 : <Spinner/>
         )
     }
 }
+const mapStateToProps = state => (
+    {
+        ingredients: state.BurgerBuilder.ingredients,
+        price: state.BurgerBuilder.totalPrice,
+        loading: state.orderPurchase.loading,
+        purchased: state.orderPurchase.purchased,
+    }
+)
 
-export default withErrorHandler(ContactData, axios)
+const mapDispatchToProps = dispatch => {
+    return {
+        onOrderBurger: (orderData) => dispatch(actions.purchaseBurger(orderData))
+    }
+}
+
+const connectedContactData = connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactData, axios))
+export {connectedContactData as ContactData}

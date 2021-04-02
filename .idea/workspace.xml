@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="" />
+    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/actions/burgerBuilder.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/ordersBurgerPage.action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/ErrorMessage/ErrorMessage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/orderPurchase.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/Checkout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Orders/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Orders/Orders.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/burgerBuilder.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +67,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/actions" />
+      <recent name="$PROJECT_DIR$/src/reducers" />
       <recent name="$PROJECT_DIR$/src/components/Order/CheckoutSummary" />
     </key>
   </component>
@@ -61,6 +87,8 @@
       <workItem from="1616606636775" duration="167000" />
       <workItem from="1616921235680" duration="37047000" />
       <workItem from="1617179725164" duration="6586000" />
+      <workItem from="1617263646785" duration="245000" />
+      <workItem from="1617263899312" duration="32794000" />
     </task>
     <task id="LOCAL-00001" summary="Router Orders Order Form">
       <created>1617095775291</created>
@@ -109,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Router Orders Order Form" />
     <MESSAGE value="add form validation yup" />
-    <option name="LAST_COMMIT_MESSAGE" value="add form validation yup" />
+    <MESSAGE value="refactoring with redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring with redux" />
   </component>
 </project>

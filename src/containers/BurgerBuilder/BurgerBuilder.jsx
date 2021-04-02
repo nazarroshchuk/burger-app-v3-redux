@@ -10,71 +10,30 @@ import { init as axios } from '../../services/axios-orders';
 import { Spinner } from '../../components/UI/Spinner/Spinner';
 import { withErrorHandler } from '../../hoc/withErrorHandler/withErrorHandler';
 
-import * as actionsType from "../../store/actions";
+import * as actions from "../../actions/index";
 
 
-const INGREDIENT_PRICES = {
-    salad: 0.5,
-    cheese: 0.4,
-    bacon: 0.7,
-    meat: 1.3
-}
+
+
 
 class BurgerBuilder extends Component {
     state = {
-        totalPrice: 0,
         purchasable: false,
         purchasing: false,
-        loading: false,
         errorInit: false,
     }
 
     componentDidMount() {
-        // axios.get('/ingredients.json')
-        //     .then(response => {
-        //         this.setState({ ingredients: response.data })
-        //     })
-        //     .catch(error => {
-        //         this.setState({ errorInit: true, loading: false });
-        //     });
+        this.props.init();
     }
 
+    // gives total sum all added ingredients
     updatePurchaseState = (ingredients) => {
         const sum = Object.keys(ingredients)
             .map(ingKey => ingredients[ingKey])
             .reduce((sum, el) => sum + el, 0);
-        this.setState({ purchasable: sum >   0 })
-    }
 
-
-    addIngredientHandler = (type) => {
-        const oldCount = this.state.ingredients[type];
-        const updatedCount = oldCount + 1;
-        const updatedIngredients = {
-            ...this.state.ingredients
-        };
-        updatedIngredients[type] = updatedCount;
-
-        const priceAddition = INGREDIENT_PRICES[type];
-        const oldPrice = this.state.totalPrice;
-        const newPrice = oldPrice + priceAddition;
-        this.setState({totalPrice: newPrice, ingredients: updatedIngredients })
-        this.updatePurchaseState(updatedIngredients);
-    }
-
-    removeIngredientHandler = (type) => {
-        const oldCount = this.state.ingredients[type];
-        const updatedCount = oldCount - 1;
-        const updatedIngredients = {
-            ...this.state.ingredients
-        };
-        updatedIngredients[type] = updatedCount;
-
-        const priceAddition = INGREDIENT_PRICES[type];
-        const oldPrice = this.state.totalPrice;
-        const newPrice = oldPrice - priceAddition;
-        this.setState({totalPrice: newPrice, ingredients: updatedIngredients });
-        this.updatePurchaseState(updatedIngredients);
+        return  sum >   0;
     }
 
     purchaseHandler = () => {
@@ -89,19 +48,8 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinue = () => {
-        const queryParams = [];
-        for (let key in this.props.ingredients) {
-            queryParams.push(encodeURIComponent(key) + '=' + encodeURIComponent(this.props.ingredients[key]));
-        }
-        queryParams.push('price=' + this.state.totalPrice);
-        const queryString = queryParams.join('&');
-
-        //console.log(this.state.ingredients, queryParams, queryString);
-
-        this.props.history.push({
-            pathname: '/checkout',
-            search: '?' + queryString
-        });
+        this.props.initPurchase();
+        this.props.history.push('/checkout');
     }
 
     render() {
@@ -110,57 +58,60 @@ class BurgerBuilder extends Component {
             disabled[key] = disabled[key] <= 0
         }
 
+        const errorMessage = this.props.errorInit
+            && (<div style={{ color: 'orange', textAlign: 'center'}}>Something is wrong, please try later!</div>)
+
         return (
-            !this.state.errorInit
-            ? (
-                <Auxx>
-                        {/*{ this.state.purchasing &&*/}
-                        {/*// visibility was implemented with help  styling CSS in Modal component//*/}
-                        <Modal show={this.state.purchasing} modalClosed={this.purchaseCancel}>
-                            {(!this.props.ingredients || this.state.loading)
-                                ? <Spinner />
-                                : <OrderSummary
+            !this.props.errorInit
+            ?
+                (
+                    this.props.ingredients
+                    ? (
+                        <Auxx>
+                            {/*{ this.state.purchasing &&*/}
+                            {/*// visibility was implemented with help  styling CSS in Modal component//*/}
+                            <Modal show={this.state.purchasing} modalClosed={this.purchaseCancel}>
+                                <OrderSummary
                                     ingredients={this.props.ingredients}
                                     cancelBtn={this.purchaseCancel}
                                     continueBtn={this.purchaseContinue}
-                                    totalPrice={this.state.totalPrice}
+                                    totalPrice={this.props.totalPrice}
                                 />
-                            }
-                        </Modal>
-                        {this.props.ingredients
-                            ? (
-                                <Auxx>
-                                    <Burger ingredients={this.props.ingredients}/>
-                                    <BuildControls
-                                        ingredientAdded={this.props.onIngredientAdded}
-                                        ingredientRemove={this.props.onIngredientRemoved}
-                                        disabled={disabled}
-                                        price={this.state.totalPrice}
-                                        purchasable={this.state.purchasable}
-                                        ordered={this.purchaseHandler}
-                                    />
-                                </Auxx>
-                            )
-                            : <Spinner />
-                        }
-                    </Auxx>
+                            </Modal>
+                            <Auxx>
+                                <Burger ingredients={this.props.ingredients}/>
+                                <BuildControls
+                                    ingredientAdded={this.props.onIngredientAdded}
+                                    ingredientRemove={this.props.onIngredientRemoved}
+                                    disabled={disabled}
+                                    price={this.props.totalPrice}
+                                    purchasable={this.updatePurchaseState(this.props.ingredients)}
+                                    ordered={this.purchaseHandler}
+                                />
+                            </Auxx>)
+                        </Auxx>
+                        )
+                        : <Spinner />
                 )
-                : <p>Application can't be load ...</p>
+            :  errorMessage
         );
     }
 }
 
 const mapStateToProps = state => {
     return {
-        ingredients: state.ingredients,
-        price: state.totalPrice,
+        ingredients: state.BurgerBuilder.ingredients,
+        totalPrice: state.BurgerBuilder.totalPrice,
+        errorInit: state.BurgerBuilder.error,
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIngredientAdded: (ingName) => dispatch({type: actionsType.ADD_INGREDIENTS, ingName}),
-        onIngredientRemoved: (ingName) => dispatch({type: actionsType.REMOVE_INGREDIENTS, ingName}),
+        onIngredientAdded: (ingName) => dispatch(actions.addIngredient(ingName)),
+        onIngredientRemoved: (ingName) => dispatch(actions.removeIngredient(ingName)),
+        init: () => dispatch(actions.initIngredients()),
+        initPurchase: () => dispatch(actions.purchaseBurgerInit()),
     }
 }
 

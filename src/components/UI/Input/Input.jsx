@@ -27,8 +27,9 @@ export const Input = (props) => {
                 <select
                     className={classes.InputElement}
                     onChange={props.changed}
+                    defaultValue='1'
                 >
-                    <option selected>Select delivery method...</option>
+                    <option>Select delivery method...</option>
                     {props.elementConfig.options.map(op => (
                         <option key={op.value} value={op.value}>{op.displayValue}</option>
                     ))}
