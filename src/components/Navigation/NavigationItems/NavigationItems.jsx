@@ -8,7 +8,6 @@ import {useDispatch, useSelector} from "react-redux";
 export const NavigationItems =() => {
     const dispatch = useDispatch();
     const isAuthenticated = useSelector(state => state.authentication.isAuthenticated);
-    console.log(isAuthenticated)
     return (
         <ul className={classes.NavigationItems}>
             <NavigationItem link={'/burger-builder'}>Burger Builder</NavigationItem>

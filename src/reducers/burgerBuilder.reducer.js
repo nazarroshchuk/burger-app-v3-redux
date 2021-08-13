@@ -46,6 +46,6 @@ export const BurgerBuilder = (state = initialState, action) => {
                 ingredients: action.payload,
                 error: true,
             }
+        default: return state;
     }
-    return state;
 }

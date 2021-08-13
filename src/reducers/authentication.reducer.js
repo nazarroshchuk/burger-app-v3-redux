@@ -45,6 +45,5 @@ export const authentication = (state = initialState, action) => {
             }
         default:
             return state;
-
     }
 }

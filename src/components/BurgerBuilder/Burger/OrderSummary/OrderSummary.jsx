@@ -3,10 +3,6 @@ import {Wrapper} from "../../../../hoc/Wrapper/Wrapper";
 import {Button} from "../../../UI/Button/Button";
 
 export class OrderSummary extends React.Component {
-    // This could be a functional component, doesn't have to be a class component
-    componentWillUpdate() {
-        console.log('[OrderSummary] WillUpdate');
-    }
 
     render() {
         const ingredientSummary = Object.keys(this.props.ingredients)

@@ -1,6 +1,5 @@
 import * as actionsTypes from './actionsTypes';
 import {init as axios} from "../services/axios-orders";
-import {resetTotalPrise} from "./burgerBuilder.actions";
 
 export const purchaseBurgerSuccess = (id, orderData) => {
     return {
