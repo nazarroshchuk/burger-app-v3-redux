@@ -1,20 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { Auxx } from '../../hoc/Auxx/Auxx';
-import { Burger } from '../../components/Burger/Burger';
-import { BuildControls } from '../../components/Burger/BuildControls/BuildControls';
-import { Modal  } from "../../components/UI/Modal/Modal";
-import { OrderSummary } from '../../components/Burger/OrderSummary/OrderSummary';
+import { Wrapper } from '../../hoc/Wrapper/Wrapper';
+import { Burger } from './Burger/Burger';
+import { BuildControls } from './Burger/BuildControls/BuildControls';
+import { Modal  } from "../UI/Modal/Modal";
+import { OrderSummary } from './Burger/OrderSummary/OrderSummary';
 import { init as axios } from '../../services/axios-orders';
-import { Spinner } from '../../components/UI/Spinner/Spinner';
+import classes from './BurgerBuilder.module.css';
+import { Spinner } from '../UI/Spinner/Spinner';
 import { withErrorHandler } from '../../hoc/withErrorHandler/withErrorHandler';
-
-import * as actions from "../../actions/index";
-
-
-
-
+import * as actions from "../../actions";
 
 class BurgerBuilder extends Component {
     state = {
@@ -67,7 +63,7 @@ class BurgerBuilder extends Component {
                 (
                     this.props.ingredients
                     ? (
-                        <Auxx>
+                        <Wrapper>
                             {/*{ this.state.purchasing &&*/}
                             {/*// visibility was implemented with help  styling CSS in Modal component//*/}
                             <Modal show={this.state.purchasing} modalClosed={this.purchaseCancel}>
@@ -78,7 +74,7 @@ class BurgerBuilder extends Component {
                                     totalPrice={this.props.totalPrice}
                                 />
                             </Modal>
-                            <Auxx>
+                            <Wrapper>
                                 <Burger ingredients={this.props.ingredients}/>
                                 <BuildControls
                                     ingredientAdded={this.props.onIngredientAdded}
@@ -88,10 +84,10 @@ class BurgerBuilder extends Component {
                                     purchasable={this.updatePurchaseState(this.props.ingredients)}
                                     ordered={this.purchaseHandler}
                                 />
-                            </Auxx>)
-                        </Auxx>
+                            </Wrapper>)
+                        </Wrapper>
                         )
-                        : <Spinner />
+                        : <Spinner addClass={classes.SpinnerBuilderContainer}/>
                 )
             :  errorMessage
         );

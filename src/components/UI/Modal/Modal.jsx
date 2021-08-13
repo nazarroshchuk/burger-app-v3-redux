@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Modal.module.css';
-import { Auxx } from "../../../hoc/Auxx/Auxx";
+import { Wrapper } from "../../../hoc/Wrapper/Wrapper";
 import { Backdrop } from "../Backdrop/Backdrop";
 
 export class Modal extends React.Component {
@@ -12,7 +12,7 @@ export class Modal extends React.Component {
 
     render() {
         return (
-            <Auxx>
+            <Wrapper>
                 <Backdrop show={this.props.show} clicked={this.props.modalClosed}/>
                 <div
                     className={classes.Modal}
@@ -23,7 +23,7 @@ export class Modal extends React.Component {
                 >
                     {this.props.children}
                 </div>
-            </Auxx>
+            </Wrapper>
         )
     }
 }

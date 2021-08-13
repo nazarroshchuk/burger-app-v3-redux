@@ -1,6 +1,6 @@
 import React from 'react';
-import {Auxx} from "../../../hoc/Auxx/Auxx";
-import {Button} from "../../UI/Button/Button";
+import {Wrapper} from "../../../../hoc/Wrapper/Wrapper";
+import {Button} from "../../../UI/Button/Button";
 
 export class OrderSummary extends React.Component {
     // This could be a functional component, doesn't have to be a class component
@@ -30,7 +30,7 @@ export class OrderSummary extends React.Component {
         // })
 
         return (
-            <Auxx>
+            <Wrapper>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients:</p>
                 <ul>
@@ -40,7 +40,7 @@ export class OrderSummary extends React.Component {
                 <p>Continue to Checkout?</p>
                 <Button btnType='Danger' clicked={this.props.cancelBtn}>CANCEL</Button>
                 <Button btnType='Success' clicked={this.props.continueBtn}>CONTINUE</Button>
-            </Auxx>
+            </Wrapper>
         )
     }
 }

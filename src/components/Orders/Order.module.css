@@ -1,14 +1,20 @@
 .Order {
     width: 80%;
     border: 1px solid #eee;
-    box-shadow: 0 2px 3px #ccc;
     padding: 10px;
     margin: 10px auto;
     box-sizing: border-box;
+    background: rgba( 39, 178, 229, 0.10 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .Ingredient {
     border: 1px solid #5baac6;
+    border-radius: 5px;
     text-transform: capitalize;
     display: inline-block;
     margin: 0 8px;

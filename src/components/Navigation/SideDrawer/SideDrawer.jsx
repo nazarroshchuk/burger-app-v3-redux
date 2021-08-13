@@ -3,25 +3,25 @@ import { Logo } from "../../Logo/Logo";
 import { NavigationItems } from "../NavigationItems/NavigationItems";
 import classes from './SideDrawer.module.css';
 import logo from '../../../assets/images/burger-logo.png'
-import { Auxx } from "../../../hoc/Auxx/Auxx";
+import { Wrapper } from "../../../hoc/Wrapper/Wrapper";
 import { Backdrop } from "../../UI/Backdrop/Backdrop";
 
-export const SideDrawer = (props) => {
+export const SideDrawer = ({isAuth, open, closed}) => {
     let attachedClasses = [ classes.SideDrawer, classes.Close];
-    if (props.open) {
+    if (open) {
         attachedClasses  = [ classes.SideDrawer, classes.Open];
     }
     return (
-        <Auxx>
-            <Backdrop show={props.open} clicked={props.closed}/>
+        <Wrapper>
+            <Backdrop show={open} clicked={closed}/>
             <div className={attachedClasses.join(' ')}>
                 <div className={classes.Logo}>
                     <Logo srcImg={logo}/>
                 </div>
                 <nav>
-                    <NavigationItems/>
+                    <NavigationItems isAuthenticated={isAuth}/>
                 </nav>
             </div>
-        </Auxx>
+        </Wrapper>
     );
 }

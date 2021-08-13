@@ -20,6 +20,9 @@ export const ordersBurgerPage = (state = initialState, action) =>  {
                 success: true,
                 error: false,
             }
+        case actionsTypes.RESET_ORDERS_STATE:
+            console.log('reset')
+            return {...initialState}
     }
     return state;
 }

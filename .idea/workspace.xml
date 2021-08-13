@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/burgerBuilder.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/ordersBurgerPage.action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/ErrorMessage/ErrorMessage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/orderPurchase.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
+    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="Authentication completing">
+      <change afterPath="$PROJECT_DIR$/src/components/Authentication/Authentication.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Authentication/Authentication.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Authentication/Logout/Logout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Authentication/authenticationURL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/BurgerBuilder.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Checkout/Checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Orders/Orders.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Container/Container.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Container/Container.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/authentication.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/fireBasekit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Input/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Input/Input.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/Checkout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Orders/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Orders/Orders.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actionsTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/ordersBurgerPage.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ordersBurgerPage.action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControl/BuildControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControl/BuildControl.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControl/BuildControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControl/BuildControl.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControls.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BuildControls/BuildControls.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControls.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/Burger.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/Burger.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/Burger.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/Burger.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BurgerIngredient/BurgerIngredient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BurgerIngredient/BurgerIngredient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/BurgerIngredient/BurgerIngredient.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BurgerIngredient/BurgerIngredient.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Burger/OrderSummary/OrderSummary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/OrderSummary/OrderSummary.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/SideDrawer/SideDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/SideDrawer/SideDrawer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Toolbar/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Toolbar/Toolbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Order/CheckoutSummary/CheckoutSummary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Order Confirmation/CheckoutSummary/CheckoutSummary.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Order/CheckoutSummary/CheckoutSummary.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Order Confirmation/CheckoutSummary/CheckoutSummary.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Orders/Order.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Order/Order.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Orders/Order.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/BurgerBuilder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/Checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/authentication.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/Checkout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/ContactData/ContactData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/ContactData/ContactData.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Orders/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Auxx/Auxx.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Wrapper/Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withErrorHandler/withErrorHandler.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withErrorHandler/withErrorHandler.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionsTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/burgerBuilder.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +82,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1qCTi2iaCKkvT84p4vhUVxmoXYm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -63,15 +108,22 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Orders" />
+      <recent name="$PROJECT_DIR$/src/components/UI/Container" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/BurgerBuilder" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/actions" />
-      <recent name="$PROJECT_DIR$/src/reducers" />
-      <recent name="$PROJECT_DIR$/src/components/Order/CheckoutSummary" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="NavigationItems.jsx" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItems.jsx" working-dir="$PROJECT_DIR$/src/components/Navigation/NavigationItems">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,7 +140,10 @@
       <workItem from="1616921235680" duration="37047000" />
       <workItem from="1617179725164" duration="6586000" />
       <workItem from="1617263646785" duration="245000" />
-      <workItem from="1617263899312" duration="32794000" />
+      <workItem from="1617263899312" duration="33803000" />
+      <workItem from="1617891578298" duration="3609000" />
+      <workItem from="1617953005462" duration="14856000" />
+      <workItem from="1628839438316" duration="15647000" />
     </task>
     <task id="LOCAL-00001" summary="Router Orders Order Form">
       <created>1617095775291</created>
@@ -104,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617119324057</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactoring with redux">
+      <created>1617359389904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617359389904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +183,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -132,12 +194,40 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Router Orders Order Form" />
     <MESSAGE value="add form validation yup" />
     <MESSAGE value="refactoring with redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring with redux" />
+    <MESSAGE value="Authentication completing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authentication completing" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Checkout/Checkout.jsx</url>
+          <line>42</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

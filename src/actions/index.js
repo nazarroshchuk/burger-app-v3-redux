@@ -11,3 +11,7 @@ export {
 export { purchaseBurger,
     purchaseBurgerInit
 } from './orderPurchase.action';
+
+export {
+    authenticationAction,
+} from './authentication.actions';

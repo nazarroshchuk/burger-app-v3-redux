@@ -1,0 +1,2 @@
+export const SIGN_UP = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCs7who-LOKW8dYMbP_KvKrNv9mz80TRS4';
+export const SIGN_IN = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCs7who-LOKW8dYMbP_KvKrNv9mz80TRS4';

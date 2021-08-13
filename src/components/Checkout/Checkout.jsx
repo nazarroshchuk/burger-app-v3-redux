@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Redirect, Route} from "react-router";
 import { connect } from "react-redux";
 
-import { CheckoutSummary} from "../../components/Order/CheckoutSummary/CheckoutSummary";
+import { CheckoutSummary} from "../Order Confirmation/CheckoutSummary/CheckoutSummary";
 import { ContactData } from "./ContactData/ContactData";
 
 

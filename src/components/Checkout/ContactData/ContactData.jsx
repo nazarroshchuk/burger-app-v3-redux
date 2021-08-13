@@ -4,11 +4,11 @@ import { init as axios } from '../../../services/axios-orders';
 import { userSchema } from "../../../services/orderValidation";
 import classes from './ContactData.module.css';
 
-import { Button } from '../../../components/UI/Button/Button';
-import { Spinner } from '../../../components/UI/Spinner/Spinner';
+import { Button } from '../../UI/Button/Button';
+import { Spinner } from '../../UI/Spinner/Spinner';
 import { withErrorHandler } from '../../../hoc/withErrorHandler/withErrorHandler';
-import {Input} from "../../../components/UI/Input/Input";
-import * as actions from '../../../actions/index';
+import {Input} from "../../UI/Input/Input";
+import * as actions from '../../../actions';
 import {Redirect} from "react-router";
 
 class ContactData extends Component {
@@ -109,8 +109,9 @@ class ContactData extends Component {
             price: this.props.price,
             customer: orderData,
         }
+        console.log(order, this.props.token)
 
-        this.props.onOrderBurger(order);
+        this.props.onOrderBurger(order, this.props.token);
     }
 
     onChangeHandler = (e, inputIdentity) => {
@@ -159,7 +160,7 @@ class ContactData extends Component {
                             {!this.state.isFormValid && <p className={classes.ValidationMessage}>All inputs must be filled!</p>}
                             <Button
                                 btnType='Success'
-                                clicked={() => {}}
+                                type={'submit'}
                             >
                                 ORDER
                             </Button>
@@ -175,12 +176,13 @@ const mapStateToProps = state => (
         price: state.BurgerBuilder.totalPrice,
         loading: state.orderPurchase.loading,
         purchased: state.orderPurchase.purchased,
+        token: state.authentication.token,
     }
 )
 
 const mapDispatchToProps = dispatch => {
     return {
-        onOrderBurger: (orderData) => dispatch(actions.purchaseBurger(orderData))
+        onOrderBurger: (orderData, token) => dispatch(actions.purchaseBurger(orderData, token))
     }
 }
 

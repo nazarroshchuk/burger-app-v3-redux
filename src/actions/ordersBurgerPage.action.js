@@ -1,9 +1,10 @@
 import * as actionsTypes from '../actions/actionsTypes';
 import {init as axios} from "../services/axios-orders";
 
-const orderFailAction = () => (
+const orderFailAction = (error) => (
     {
         type: actionsTypes.FETCH_ORDERS_FAIL,
+        payload: error,
     }
 )
 
@@ -14,9 +15,9 @@ const orderSetData = (data) => (
     }
 )
 
-export const initOrder = () => {
+export const initOrder = (token) => {
     return dispatch => {
-        axios.get('/orders.json')
+        axios.get('/orders.json?auth=' + token)
             .then(response => {
                 const getData = [];
                 for (const key in response.data) {
@@ -28,9 +29,8 @@ export const initOrder = () => {
                 dispatch(orderSetData(getData));
             })
             .catch(err =>
-                dispatch(orderFailAction())
+                dispatch(orderFailAction(err))
             )
-
     }
 }
 
