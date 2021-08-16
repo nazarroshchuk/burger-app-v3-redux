@@ -38,7 +38,6 @@ export const authentication = (state = initialState, action) => {
                 userId: null,
             }
         case actionsType.AUTH_SET_AUTHENTICATED:
-            console.log(action.payload.isAuthenticated)
             return {
                 ...state,
                 isAuthenticated: action.payload.isAuthenticated

@@ -15,16 +15,6 @@ export class OrderSummary extends React.Component {
                     <span style={{textTransform: 'capitalize'}}>{`${el[0]}: ${el.length}`}</span>
                 </li>);
 
-        //Variant with staticList
-        // const ingredientSummary = Object.keys(props.ingredients)
-        //     .map(ingKey => {
-        //     return (
-        //         <li key={ingKey}>
-        //             <span style={{ textTransform: 'capitalize' }}>{ingKey}: {props.ingredients[ingKey]} </span>
-        //         </li>
-        //     )
-        // })
-
         return (
             <Wrapper>
                 <h3>Your Order</h3>

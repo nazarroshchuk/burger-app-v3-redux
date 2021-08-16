@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="Authentication completing">
+    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="clear code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/OrderSummary/OrderSummary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/OrderSummary/OrderSummary.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/burgerBuilder.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/burgerBuilder.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/authentication.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authentication.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +66,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/store" />
       <recent name="$PROJECT_DIR$/src/components/Orders" />
       <recent name="$PROJECT_DIR$/src/components/UI/Container" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/BurgerBuilder" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager">
@@ -93,7 +96,8 @@
       <workItem from="1617263899312" duration="33803000" />
       <workItem from="1617891578298" duration="3609000" />
       <workItem from="1617953005462" duration="14856000" />
-      <workItem from="1628839438316" duration="16644000" />
+      <workItem from="1628839438316" duration="17382000" />
+      <workItem from="1629097000064" duration="2782000" />
     </task>
     <task id="LOCAL-00001" summary="Router Orders Order Form">
       <created>1617095775291</created>
@@ -123,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628859890116</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="clear code">
+      <created>1628863235574</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628863235574</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +184,8 @@
     <MESSAGE value="add form validation yup" />
     <MESSAGE value="refactoring with redux" />
     <MESSAGE value="Authentication completing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authentication completing" />
+    <MESSAGE value="clear code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -181,7 +193,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Checkout/Checkout.jsx</url>
           <line>42</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
