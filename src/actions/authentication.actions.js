@@ -1,4 +1,4 @@
-import * as actions from '../actions/actionsTypes';
+import * as actions from '../constants/actionsTypes';
 import axios from "axios";
 import * as authURL from '../components/Authentication/authenticationURL';
 import { history } from '../history';

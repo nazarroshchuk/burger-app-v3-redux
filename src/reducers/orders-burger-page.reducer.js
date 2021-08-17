@@ -1,4 +1,4 @@
-import * as actionsTypes from '../actions/actionsTypes';
+import * as actionsTypes from '../constants/actionsTypes';
 
 const initialState = {
     orders: null,

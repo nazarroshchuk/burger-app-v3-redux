@@ -3,18 +3,21 @@ import { connect } from "react-redux";
 import * as actions from '../../actions';
 
 import { Order } from './Order';
-import { init as axios } from '../../services/axios-orders';
 import { Spinner } from '../UI/Spinner/Spinner';
 import { ErrorMessage } from "../UI/ErrorMessage/ErrorMessage";
-import { withErrorHandler } from '../../hoc/withErrorHandler/withErrorHandler';
 import classes from './Orders.module.css';
-import {Link} from "react-router-dom";
-import {Container} from "../UI/Container/Container";
+import { Link } from "react-router-dom";
+import { Container } from "../UI/Container/Container";
+import { errorActions } from "../../actions";
 
 class Orders extends Component {
 
     componentDidMount() {
        this.props.token && this.props.init(this.props.token);
+    }
+
+    componentWillUnmount() {
+       this.props.resetError();
     }
 
     render() {
@@ -32,6 +35,7 @@ class Orders extends Component {
                     : this.props.error ? <ErrorMessage /> : this.props.token && <Spinner addClass={classes.SpinnerOrderContainer} />
                 }
                 {!this.props.token && <p>You need to <Link to={'/log-in'}>log in</Link> to see your pre-orders!</p>}
+                {this.props.orders && !this.props.orders.length && <p>Your Order List is empty yet!</p>}
             </Container>
         );
     }
@@ -41,7 +45,7 @@ class Orders extends Component {
 const mapStateToProps = state => (
     {
         orders: state.ordersBurgerPage.orders,
-        error: state.ordersBurgerPage.error,
+        error: state.error.error,
         token: state.authentication.token,
     }
 )
@@ -49,9 +53,10 @@ const mapStateToProps = state => (
 const mapDispatchToProps = dispatch => {
     return {
         init: (token) => dispatch(actions.initOrder(token)),
+        resetError: () => dispatch(errorActions.resetError()),
     }
 }
 
-const connectedOrder = connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(Orders, axios));
+const connectedOrder = connect(mapStateToProps,mapDispatchToProps)(Orders);
 
 export  { connectedOrder as Orders };

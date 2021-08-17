@@ -1,0 +1,16 @@
+.loginRequest {
+    background-color: #efab4c;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.loginRequest ul {
+    list-style: none;
+}
+
+.loginRequest a {
+    text-decoration: none;
+    color: #7f3608;
+    font-weight: bold;
+}

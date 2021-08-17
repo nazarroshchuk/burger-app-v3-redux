@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { init as axios } from '../../../services/axios-orders';
 import { userSchema } from "../../../services/orderValidation";
 import classes from './ContactData.module.css';
 
 import { Button } from '../../UI/Button/Button';
 import { Spinner } from '../../UI/Spinner/Spinner';
-import { withErrorHandler } from '../../../hoc/withErrorHandler/withErrorHandler';
-import {Input} from "../../UI/Input/Input";
+import { Input } from "../../UI/Input/Input";
 import * as actions from '../../../actions';
-import {Redirect} from "react-router";
+import { Redirect } from "react-router";
 
 class ContactData extends Component {
     state = {
@@ -90,13 +88,7 @@ class ContactData extends Component {
         const isValid = await this.orderValidation()
         this.setState({ isFormValid: isValid })
 
-        //????????????????????????
-        // this.orderValidation()
-        //     .then(response => this.setState({ isFormValid: response }));
-
-        console.log(this.state.isFormValid)
         if (!this.state.isFormValid) {
-            console.log('not submitted');
             return;
         }
 
@@ -109,7 +101,6 @@ class ContactData extends Component {
             price: this.props.price,
             customer: orderData,
         }
-        console.log(order, this.props.token)
 
         this.props.onOrderBurger(order, this.props.token);
     }
@@ -131,7 +122,6 @@ class ContactData extends Component {
 
     render() {
 
-        console.log(this.state.isFormValid)
         const formInputsArray = [];
 
         for ( const key in this.state.orderForm) {
@@ -186,5 +176,5 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-const connectedContactData = connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactData, axios))
+const connectedContactData = connect(mapStateToProps, mapDispatchToProps)(ContactData)
 export {connectedContactData as ContactData}

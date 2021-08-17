@@ -11,10 +11,10 @@ export const Order = ({ ingredients, price}) => {
         })
     }
 
-    const inredientsInPage = ingredientsInArr.map(ing => (
+    const inredientsInPage = ingredientsInArr.map((ing, index) => (
         <span
             className={classes.Ingredient}
-            key={ing.name}
+            key={index}
         >
             {ing.ingredient}: {ing.count}
         </span>

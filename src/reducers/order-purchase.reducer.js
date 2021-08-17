@@ -1,4 +1,4 @@
-import * as actionsTypes from '../actions/actionsTypes';
+import * as actionsTypes from '../constants/actionsTypes';
 
 const initialState = {
     orders: [],
@@ -13,11 +13,6 @@ export const orderPurchase = (state = initialState, action) => {
                 ...state,
                 purchased: false,
             }
-        case actionsTypes.PURCHASE_BURGER_START:
-           return {
-               ...state,
-               loading: true,
-           }
         case actionsTypes.PURCHASE_BURGER_SUCCESS:
             const newOrder = {
                 ...action.orderData,
@@ -29,10 +24,10 @@ export const orderPurchase = (state = initialState, action) => {
                 orders: state.orders.concat(newOrder),
                 purchased: true,
             }
-        case actionsTypes.PURCHASE_BURGER_FAIL:
+        case actionsTypes.PURCHASE_BURGER_LOADING_STATUS:
             return {
                 ...state,
-                loading: false,
+                loading: action.payload.loading,
             }
         default: return state;
     }

@@ -2,16 +2,20 @@ export {
     addIngredient,
     removeIngredient,
     initIngredients,
-} from './burgerBuilder.actions';
+} from './burger-Builder.actions';
 
 export {
     initOrder
-} from './ordersBurgerPage.action';
+} from './orders-page.actions';
 
 export { purchaseBurger,
     purchaseBurgerInit
-} from './orderPurchase.action';
+} from './order-purchase.actions';
 
 export {
     authenticationAction,
 } from './authentication.actions';
+
+export {
+    errorActions,
+} from './error-Actions';
