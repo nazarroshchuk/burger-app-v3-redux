@@ -2,7 +2,12 @@
     background-color: #efab4c;
     border-radius: 3px;
     padding: 10px;
-    margin: 15px;
+    text-align: center;
+}
+
+.loginRequest span {
+    color: #196114;
+    font-weight: bold;
 }
 
 .loginRequest ul {

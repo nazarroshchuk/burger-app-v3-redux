@@ -34,7 +34,7 @@ class Orders extends Component {
                     ))
                     : this.props.error ? <ErrorMessage /> : this.props.token && <Spinner addClass={classes.SpinnerOrderContainer} />
                 }
-                {!this.props.token && <p>You need to <Link to={'/log-in'}>log in</Link> to see your pre-orders!</p>}
+                {!this.props.token && <Container><p className={classes.Orders} style={{ color: 'orange', textAlign: 'center'}}>You need to <Link to={'/log-in'}>Log in</Link> to see your pre-orders!</p></Container>}
                 {this.props.orders && !this.props.orders.length && <p>Your Order List is empty yet!</p>}
             </Container>
         );

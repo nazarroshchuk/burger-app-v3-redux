@@ -4,54 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="fix loader Orders">
-      <change afterPath="$PROJECT_DIR$/src/actions/burger-Builder.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/error-Actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/error-toast-actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/notification-toast-Actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/order-purchase.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/orders-page.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Errors/ErrorPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Errors/Shield.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/LoginRequest/LoginRequest.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/LoginRequest/LoginRequest.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/ToastNotification/ToastError.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/ToastNotification/ToastMessage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/error.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/error.messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/notification-and-error-modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/notifications.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/error.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/notifications.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/DATABASE_URL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/utils/json-utils.js" afterDir="false" />
+    <list default="true" id="0c0eb5ae-0773-4540-9b27-506421260af2" name="Default Changelist" comment="catch errors / send notifications/ refractoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionsTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionsTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/authentication.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/authentication.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/burgerBuilder.actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/orderPurchase.action.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/ordersBurgerPage.action.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControl/BuildControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControl/BuildControl.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControls.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/BuildControls/BuildControls.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/Burger.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/Burger/Burger.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BurgerBuilder/BurgerBuilder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BurgerBuilder/BurgerBuilder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/Checkout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Checkout/ContactData/ContactData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Checkout/ContactData/ContactData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Orders/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Orders/Order.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Orders/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Backdrop/Backdrop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Backdrop/Backdrop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/Layout/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withErrorHandler/withErrorHandler.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/authentication.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authentication.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/burgerBuilder.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/burger-builder.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/orderPurchase.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/order-purchase.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/ordersBurgerPage.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/orders-burger-page.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/axios-orders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Orders/Orders.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/LoginRequest/LoginRequest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/LoginRequest/LoginRequest.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/LoginRequest/LoginRequest.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/LoginRequest/LoginRequest.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +95,7 @@
       <workItem from="1628839438316" duration="17382000" />
       <workItem from="1629097000064" duration="26380000" />
       <workItem from="1629184763429" duration="231000" />
-      <workItem from="1629185232046" duration="6262000" />
+      <workItem from="1629185232046" duration="7153000" />
     </task>
     <task id="LOCAL-00001" summary="Router Orders Order Form">
       <created>1617095775291</created>
@@ -188,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629102665350</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="catch errors / send notifications/ refractoring">
+      <created>1629192772832</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629192772832</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +206,7 @@
     <MESSAGE value="clear code" />
     <MESSAGE value="add favicon" />
     <MESSAGE value="fix loader Orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix loader Orders" />
+    <MESSAGE value="catch errors / send notifications/ refractoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="catch errors / send notifications/ refractoring" />
   </component>
 </project>

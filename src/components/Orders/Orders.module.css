@@ -5,3 +5,9 @@
     padding: 100px;
 }
 
+.Orders a {
+    text-decoration: none;
+    color: #7f3608;
+    font-weight: bold;
+}
+
