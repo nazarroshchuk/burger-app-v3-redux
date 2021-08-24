@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { Wrapper } from '../../hoc/Wrapper/Wrapper';
+import { Wrapper } from '../UI/Wrapper/Wrapper';
 import { Burger } from './Burger/Burger';
 import { BuildControls } from './Burger/BuildControls/BuildControls';
 import { Modal  } from "../UI/Modal/Modal";

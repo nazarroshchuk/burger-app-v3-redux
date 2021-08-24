@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Modal.module.css';
-import { Wrapper } from "../../../hoc/Wrapper/Wrapper";
+import { Wrapper } from "../Wrapper/Wrapper";
 import { Backdrop } from "../Backdrop/Backdrop";
 
 export class Modal extends React.Component {

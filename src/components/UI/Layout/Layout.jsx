@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Wrapper } from '../Wrapper/Wrapper';
 import classes from './Layout.module.css'
-import { Toolbar } from "../../components/Navigation/Toolbar/Toolbar";
-import { SideDrawer } from "../../components/Navigation/SideDrawer/SideDrawer";
+import { Toolbar } from "../../Navigation/Toolbar/Toolbar";
+import { SideDrawer } from "../../Navigation/SideDrawer/SideDrawer";
 import { connect } from "react-redux";
 
 class Layout extends Component  {

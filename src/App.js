@@ -1,6 +1,6 @@
 import React from "react";
 import {Redirect, Route, Switch} from "react-router";
-import { Layout } from './hoc/Layout/Layout';
+import { Layout } from './components/UI/Layout/Layout';
 import BurgerBuilder from "./components/BurgerBuilder/BurgerBuilder";
 import { Checkout } from "./components/Checkout/Checkout";
 import { Orders } from './components/Orders/Orders';
